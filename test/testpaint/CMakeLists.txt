@@ -4,6 +4,8 @@ if (CMAKE_BINARY_DIR STREQUAL CMAKE_SOURCE_DIR)
     message(FATAL_ERROR "Building in-source is not supported! Create a build dir and remove ${CMAKE_SOURCE_DIR}/CMakeCache.txt")
 endif ()
 
+unset(CXX_WARN_OLD_STYLE_CAST)
+
 set(OPENRCT2_EXE "${ROOT_DIR}/openrct2.exe")
 add_custom_command(
     OUTPUT openrct2_text

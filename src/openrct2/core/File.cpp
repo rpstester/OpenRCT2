@@ -132,7 +132,8 @@ namespace File
             FILETIME ftCreate, ftAccess, ftWrite;
             if (GetFileTime(hFile, &ftCreate, &ftAccess, &ftWrite))
             {
-                lastModified = ((uint64_t)ftWrite.dwHighDateTime << 32ULL) | (uint64_t)ftWrite.dwLowDateTime;
+                lastModified = (static_cast<uint64_t>(ftWrite.dwHighDateTime) << 32ULL)
+                    | static_cast<uint64_t>(ftWrite.dwLowDateTime);
             }
             CloseHandle(hFile);
         }

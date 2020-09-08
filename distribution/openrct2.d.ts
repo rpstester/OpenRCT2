@@ -1388,6 +1388,109 @@ declare global {
         postMessage(message: ParkMessageDesc): void;
     }
 
+    type ScenarioObjectiveType =
+        "none" |
+        "guestsBy" |
+        "parkValueBy" |
+        "haveFun" |
+        "buildTheBest" |
+        "10Rollercoasters" |
+        "guestsAndRating" |
+        "monthlyRideIncome" |
+        "10RollercoastersLength" |
+        "finish5Rollercoasters" |
+        "replayLoanAndParkValue" |
+        "monthlyFoodIncome";
+
+    interface ScenarioObjective {
+        /**
+         * The objective type.
+         */
+        type: ScenarioObjective;
+
+        /**
+         * The required number of guests.
+         */
+        guests: number;
+
+        /**
+         * The year the objective must be completed by the end of.
+         */
+        year: number;
+
+        /**
+         * The minimum length required for each rollercoaster.
+         */
+        length: number;
+
+        /**
+         * The minimum excitement rating required for each rollercoaster.
+         */
+        excitement: number;
+
+        /**
+         * The minimum park value required.
+         */
+        parkValue: number;
+
+        /**
+         * The minimum monthly income from rides / food.
+         */
+        monthlyIncome: number;
+    }
+
+    type ScenarioStatus = "inProgress" | "completed" | "failed";
+
+    interface Scenario {
+        /**
+         * The name of the scenario. This is not necessarily the name of the park.
+         */
+        name: string;
+
+        /**
+         * The description of the scenario, shown above the scenario objective.
+         */
+        details: string;
+
+        /**
+         * The entered player name if the scenario is complete.
+         */
+        completedBy: string;
+
+        /**
+         * The filename of the scenario that is being played. Used to match the
+         * completion score with the scenario file.
+         */
+        filename: string;
+
+        /**
+         * The criteria required to complete the scenario.
+         */
+        objective: ScenarioObjective;
+
+        /**
+         * The number of consecutive days the park rating has been under the threshold for.
+         * This is reset when the park rating rises above the threshold again.
+         * Also used to post warning messages.
+         */
+        parkRatingWarningDays: number;
+
+        /**
+         * The company value when the scenario was completed.
+         */
+        completedCompanyValue?: number;
+
+        /**
+         * The current status of the scenario.
+         */
+        status: ScenarioStatus;
+
+        /**
+         * The current highest recorded company value.
+         */
+        companyValueRecord: number;
+    }
+
     interface Cheats {
         allowArbitraryRideTypeChanges: boolean;
         allowTrackPlaceInvalidHeights: boolean;

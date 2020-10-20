@@ -3479,7 +3479,7 @@ static void window_ride_operating_invalidate(rct_window* w)
             = STR_LEAVE_IF_ANOTHER_VEHICLE_ARRIVES_TIP;
         window_ride_operating_widgets[WIDX_LEAVE_WHEN_ANOTHER_ARRIVES_CHECKBOX].text = RideTypeDescriptors[ride->type]
                                                                                            .NameConvention.vehicle
-                == RIDE_COMPONENT_TYPE_BOAT
+                == RideComponentType::Boat
             ? STR_LEAVE_IF_ANOTHER_BOAT_ARRIVES
             : STR_LEAVE_IF_ANOTHER_TRAIN_ARRIVES;
     }

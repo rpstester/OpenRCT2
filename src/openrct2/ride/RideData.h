@@ -41,12 +41,12 @@ struct RideComponentName
     rct_string_id number;
 };
 
-enum RIDE_COMPONENT_TYPE
+enum class RideComponentType
 {
-    RIDE_COMPONENT_TYPE_TRAIN,
-    RIDE_COMPONENT_TYPE_BOAT,
-    RIDE_COMPONENT_TYPE_TRACK,
-    RIDE_COMPONENT_TYPE_DOCKING_PLATFORM,
+    Train,           // RIDE_COMPONENT_TYPE_TRAIN,
+    Boat,            // RIDE_COMPONENT_TYPE_BOAT,
+    Track,           // RIDE_COMPONENT_TYPE_TRACK,
+    DockingPlatform, // RIDE_COMPONENT_TYPE_DOCKING__PLATFORM,
     RIDE_COMPONENT_TYPE_STATION,
     RIDE_COMPONENT_TYPE_CAR,
     RIDE_COMPONENT_TYPE_BUILDING,
@@ -322,7 +322,7 @@ constexpr const RideTypeDescriptor DummyRTD =
     SET_FIELD(DefaultMode, RideMode::ContinuousCircuit),
     SET_FIELD(OperatingSettings, { 0, 0, 0, 0, 0, 0 }),
     SET_FIELD(Naming, { STR_UNKNOWN_RIDE, STR_RIDE_DESCRIPTION_UNKNOWN }),
-    SET_FIELD(NameConvention, { RIDE_COMPONENT_TYPE_TRAIN, RIDE_COMPONENT_TYPE_TRACK, RIDE_COMPONENT_TYPE_STATION }),
+    SET_FIELD(NameConvention, { RideComponentType::Train, RideComponentType::Track, RIDE_COMPONENT_TYPE_STATION }),
     SET_FIELD(EnumName, "(INVALID)"),
     SET_FIELD(AvailableBreakdowns, 0),
     SET_FIELD(Heights, { 12, 64, 0, 0, }),

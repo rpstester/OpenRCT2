@@ -32,7 +32,7 @@ constexpr const RideTypeDescriptor CrookedHouseRTD =
     SET_FIELD(DefaultMode, RideMode::CrookedHouse),
     SET_FIELD(OperatingSettings, { 0, 0, 0, 0, 0, 0 }),
     SET_FIELD(Naming, { STR_RIDE_NAME_CROOKED_HOUSE, STR_RIDE_DESCRIPTION_CROOKED_HOUSE }),
-    SET_FIELD(NameConvention, { RideComponentType::Building, RIDE_COMPONENT_TYPE_STRUCTURE, RideComponentType::Station }),
+    SET_FIELD(NameConvention, { RideComponentType::Building, RideComponentType::Structure, RideComponentType::Station }),
     SET_FIELD(EnumName, nameof(RIDE_TYPE_CROOKED_HOUSE)),
     SET_FIELD(AvailableBreakdowns, 0),
     SET_FIELD(Heights, { 16, 96, 3, 2, }),

@@ -32,7 +32,7 @@ constexpr const RideTypeDescriptor HauntedHouseRTD =
     SET_FIELD(DefaultMode, RideMode::HauntedHouse),
     SET_FIELD(OperatingSettings, { 0, 0, 0, 0, 0, 0 }),
     SET_FIELD(Naming, { STR_RIDE_NAME_HAUNTED_HOUSE, STR_RIDE_DESCRIPTION_HAUNTED_HOUSE }),
-    SET_FIELD(NameConvention, { RideComponentType::Building, RIDE_COMPONENT_TYPE_STRUCTURE, RideComponentType::Station }),
+    SET_FIELD(NameConvention, { RideComponentType::Building, RideComponentType::Structure, RideComponentType::Station }),
     SET_FIELD(EnumName, nameof(RIDE_TYPE_HAUNTED_HOUSE)),
     SET_FIELD(AvailableBreakdowns, (1 << BREAKDOWN_SAFETY_CUT_OUT)),
     SET_FIELD(Heights, { 16, 160, 3, 2, }),

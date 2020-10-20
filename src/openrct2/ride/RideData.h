@@ -49,15 +49,15 @@ enum class RideComponentType
     DockingPlatform, // RIDE_COMPONENT_TYPE_DOCKING_PLATFORM,
     Station,         // RIDE_COMPONENT_TYPE_STATION,
     Car,             // RIDE_COMPONENT_TYPE_CAR,
-    Building,        // RIDE_COMPONENT_TYPE__BUILDING,
-    RIDE_COMPONENT_TYPE_STRUCTURE,
-    RIDE_COMPONENT_TYPE_SHIP,
-    RIDE_COMPONENT_TYPE_CABIN,
-    RIDE_COMPONENT_TYPE_WHEEL,
-    RIDE_COMPONENT_TYPE_RING,
-    RIDE_COMPONENT_TYPE_PLAYER,
-    RIDE_COMPONENT_TYPE_COURSE,
-    RIDE_COMPONENT_TYPE_COUNT
+    Building,        // RIDE_COMPONENT_TYPE_BUILDING,
+    Structure,       // RIDE_COMPONENT_TYPE_STRUCTURE,
+    Ship,            // RIDE_COMPONENT_TYPE_SHIP,
+    Cabin,           // RIDE_COMPONENT_TYPE_CABIN,
+    Wheel,           // RIDE_COMPONENT_TYPE_WHEEL,
+    Ring,            // RIDE_COMPONENT_TYPE_RING,
+    Player,          // RIDE_COMPONENT_TYPE_PLAYER,
+    Course,          // RIDE_COMPONENT_TYPE_COURSE,
+    Count,           // RIDE_COMPONENT_TYPE_COUNT
 };
 
 enum class RideColourKey : uint8_t

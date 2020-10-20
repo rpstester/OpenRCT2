@@ -32,7 +32,7 @@ constexpr const RideTypeDescriptor CircusRTD =
     SET_FIELD(DefaultMode, RideMode::Circus),
     SET_FIELD(OperatingSettings, { 0, 0, 0, 0, 0, 0 }),
     SET_FIELD(Naming, { STR_RIDE_NAME_CIRCUS, STR_RIDE_DESCRIPTION_CIRCUS }),
-    SET_FIELD(NameConvention, { RideComponentType::Building, RIDE_COMPONENT_TYPE_STRUCTURE, RideComponentType::Station }),
+    SET_FIELD(NameConvention, { RideComponentType::Building, RideComponentType::Structure, RideComponentType::Station }),
     SET_FIELD(EnumName, nameof(RIDE_TYPE_CIRCUS)),
     SET_FIELD(AvailableBreakdowns, (1 << BREAKDOWN_SAFETY_CUT_OUT)),
     SET_FIELD(Heights, { 12, 128, 3, 2, }),

@@ -2817,10 +2817,10 @@ static OpenRCT2String window_ride_vehicle_tooltip(
             ft.Increment(16);
             ft.Add<uint16_t>(std::max(1, ride->min_max_cars_per_train & 0xF) - rideEntry->zero_cars);
 
-            rct_string_id stringId = RideComponentNames[RIDE_COMPONENT_TYPE_CAR].singular;
+            rct_string_id stringId = RideComponentNames[RideComponentType::Car].singular;
             if ((ride->min_max_cars_per_train & 0xF) - rideEntry->zero_cars > 1)
             {
-                stringId = RideComponentNames[RIDE_COMPONENT_TYPE_CAR].plural;
+                stringId = RideComponentNames[RideComponentType::Car].plural;
             }
             ft.Add<rct_string_id>(stringId);
             return { fallback, ft };

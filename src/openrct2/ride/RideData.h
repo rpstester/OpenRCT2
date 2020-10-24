@@ -41,7 +41,7 @@ struct RideComponentName
     rct_string_id number;
 };
 
-enum class RideComponentType
+enum class RideComponentType : uint8_t
 {
     Train,           // RIDE_COMPONENT_TYPE_TRAIN,
     Boat,            // RIDE_COMPONENT_TYPE_BOAT,
@@ -74,9 +74,9 @@ enum class RideColourKey : uint8_t
 
 struct RideNameConvention
 {
-    RIDE_COMPONENT_TYPE vehicle;
-    RIDE_COMPONENT_TYPE structure;
-    RIDE_COMPONENT_TYPE station;
+    RideComponentType vehicle;
+    RideComponentType structure;
+    RideComponentType station;
 };
 
 struct RideBuildCost

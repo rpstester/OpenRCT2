@@ -2795,7 +2795,7 @@ static OpenRCT2String window_ride_vehicle_tooltip(
             auto ft = Formatter();
             ft.Increment(12);
 
-            RIDE_COMPONENT_TYPE vehicleType = RideTypeDescriptors[ride->type].NameConvention.vehicle;
+            RideComponentType vehicleType = RideTypeDescriptors[ride->type].NameConvention.vehicle;
             rct_string_id stringId = RideComponentNames[vehicleType].count;
             if (ride->max_trains > 1)
             {
@@ -2894,7 +2894,7 @@ static void window_ride_vehicle_invalidate(rct_window* w)
     auto ft = Formatter::Common();
     ft.Increment(6);
     ft.Add<uint16_t>(carsPerTrain);
-    RIDE_COMPONENT_TYPE vehicleType = RideTypeDescriptors[ride->type].NameConvention.vehicle;
+    RideComponentType vehicleType = RideTypeDescriptors[ride->type].NameConvention.vehicle;
     stringId = RideComponentNames[vehicleType].count;
     if (ride->num_vehicles > 1)
     {
